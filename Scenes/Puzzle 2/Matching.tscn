@@ -1,7 +1,7 @@
 [gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets/Puzzle 2/Label - DNA_Transcription.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Puzzle 2/RNA_Transcription.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Puzzle 2/Label - Nucleotides.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Puzzle 2/Label - DNA.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Puzzle 2/Label - mRNA.png" type="Texture" id=5]
@@ -222,10 +222,10 @@ __meta__ = {
 }
 
 [node name="DNATranscriptionLabel" type="TextureRect" parent="Background"]
-margin_left = 113.0
-margin_top = 52.0
-margin_right = 355.0
-margin_bottom = 171.0
+margin_left = 114.0
+margin_top = 49.0
+margin_right = 373.0
+margin_bottom = 168.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 1
@@ -375,7 +375,7 @@ custom_styles/panel = SubResource( 4 )
 
 [node name="InstructionLabel" type="Label" parent="."]
 margin_left = 26.0
-margin_top = 90.0
+margin_top = 94.0
 margin_right = 275.0
 margin_bottom = 575.0
 custom_styles/normal = SubResource( 2 )

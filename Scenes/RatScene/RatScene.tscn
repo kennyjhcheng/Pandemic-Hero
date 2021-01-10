@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/RatScene/0e141c.png" type="Texture" id=1]
 [ext_resource path="res://Assets/RatScene/Mice_2.png" type="Texture" id=2]
@@ -12,10 +12,31 @@
 [ext_resource path="res://Scenes/RatScene/Path.gd" type="Script" id=10]
 [ext_resource path="res://Assets/RatScene/injection.png" type="Texture" id=11]
 [ext_resource path="res://Assets/RatScene/retry_btn.png" type="Texture" id=12]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 28
 font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.423529, 0.631373, 0.796078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=11]
+size = 18
+font_data = ExtResource( 13 )
 
 [sub_resource type="Curve2D" id=2]
 _data = {
@@ -70,7 +91,22 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-resource_name = "QuickFade"
+resource_name = "PlayInstructionLabel"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("InstructionLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:visible")
 tracks/0/interp = 1
@@ -96,7 +132,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=9]
 size = 28
 font_data = ExtResource( 8 )
 
@@ -134,6 +170,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="InstructionLabel" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 448.0
+margin_right = 246.0
+margin_bottom = 582.0
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Path" type="Path2D" parent="."]
 curve = SubResource( 2 )
 script = ExtResource( 10 )
@@ -161,7 +209,6 @@ texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="FailedPopUp" type="PopupDialog" parent="."]
-visible = true
 margin_left = 415.492
 margin_top = 182.932
 margin_right = 612.492
@@ -196,14 +243,15 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/InjectRat = SubResource( 6 )
-anims/QuickFade = SubResource( 7 )
+anims/PlayInstructionLabel = SubResource( 7 )
+anims/QuickFade = SubResource( 8 )
 
 [node name="InjectionCompletion" type="Label" parent="."]
 margin_left = 265.0
 margin_top = 421.0
 margin_right = 740.0
 margin_bottom = 452.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

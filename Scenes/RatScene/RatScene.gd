@@ -15,10 +15,13 @@ var heldAtHigh = 0
 var heldAtGood = 0
 var failed = false
 var inputAllowed = true
-
+var instructionLabelText = "Left Click to catch the mouse. It's harder than you think. \nAfter you catch it, hold down the mouse button and keep the slider within the green area to inject the vaccine."
 
 func _ready():
 	$Instruction.text = "Catch the mouse"
+	$InstructionLabel.text = instructionLabelText
+	$AnimationPlayer.play("PlayInstructionLabel")
+	
 
 
 func _physics_process(delta):
@@ -76,15 +79,19 @@ func _physics_process(delta):
 			get_node('fade/CanvasLayer/Label').text = "\"Going through challenging things can teach you a lot, and they also make you appreciate the times that aren't so challenging\"\n- Carrie Fisher"
 			$AnimationPlayer.play("QuickFade")
 			yield($AnimationPlayer, "animation_finished")
-			get_node('fade').get_node('AnimationPlayer').play('FadeToMessage')
+			get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
 			yield(get_node('fade').get_node('AnimationPlayer'), 'animation_finished')
-			var fadeOutInstance2 = fadeOut.instance()
-			fadeOutInstance2.name = 'fade2'
-			self.add_child(fadeOutInstance2)
-			get_node('fade2/CanvasLayer/Label').text = "Thank you for playing our game. We hope you enjoyed it.\n Please help us improve the game by filling out a short feedback survey."
-			get_node('fade2/AnimationPlayer').play('FadeToMessage')
-			yield(get_node('fade2/AnimationPlayer'), 'animation_finished')
-			get_tree().change_scene("res://Scenes/End/FeedBackUpdated.tscn")
+			get_node('fade/CanvasLayer/Label').text = "Thank you for playing our game. We hope you enjoyed it.\n Please help us improve the game by filling out a short feedback survey."
+			$AnimationPlayer.play("QuickFade")
+			yield($AnimationPlayer, "animation_finished")
+			get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
+#			var fadeOutInstance2 = fadeOut.instance()
+#			fadeOutInstance2.name = 'fade2'
+#			self.add_child(fadeOutInstance2)
+#			get_node('fade2/CanvasLayer/Label').text = "Thank you for playing our game. We hope you enjoyed it.\n Please help us improve the game by filling out a short feedback survey."
+#			get_node('fade2/AnimationPlayer').play('FadeToMessage')
+#			yield(get_node('fade2/AnimationPlayer'), 'animation_finished')
+#			get_tree().change_scene("res://Scenes/End/FeedBackUpdated.tscn")
 
 
 

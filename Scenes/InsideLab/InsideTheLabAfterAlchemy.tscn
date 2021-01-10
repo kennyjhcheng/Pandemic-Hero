@@ -1,0 +1,389 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/GamePortals/@Puzzle1PortalSpriteSheet.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/InsideLab/InsideTheLabAfterAlchemy.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/InsideLab/Puzzle2Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/GamePortals/@Puzzle3PortalSpriteSheet.png" type="Texture" id=6]
+[ext_resource path="res://Assets/keyboard typing.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/GamePortals/@MiceCagePortalSpriteSheet.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Posters/WashHandsPoster.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Background/Wash_Hands.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "EnteringLab"
+length = 23.5
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 6.46262, 8.07762, 11.6889, 16.2039, 23.0815 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6.43009, 6.5, 8.00353, 8.06166, 11.6156, 12.3112, 15.8098, 16.1933, 23.1049 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "moveLeft"
+}, {
+"args": [  ],
+"method": "stopMove"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1, 6, 6.5, 7.80005, 8.04712, 10.9181, 11.9006, 15.7256, 21.8603, 23.0976 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1, 6.46184, 8.06325, 11.6971, 16.0083 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "posterVisible"
+}, {
+"args": [  ],
+"method": "pressEnter"
+}, {
+"args": [  ],
+"method": "pressEnter"
+} ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Label:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.024402, 6.9759, 8.03797 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 297, 263 ), Vector2( 297, 263 ), Vector2( 134, 191 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_to_alchemy"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeInLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FadeInLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/lab_dehydrator_0.PNG-6185c20f3651fd5d6a105ab6cf9c7490.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 530.902, 41.3761 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+extra_spacing_char = 1
+extra_spacing_space = -2
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[node name="InsideTheLabAfterAlchemy" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 599.65 ],
+"_edit_vertical_guides_": [ 1024.2 ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/EnteringLab = SubResource( 1 )
+anims/fade_to_alchemy = SubResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = SubResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 529.935, 623.621 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1036.32, 422.021 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 23.0082, 438.424 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="Puzzle1PortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 311.546, 433.545 )
+scale = Vector2( 0.584811, 0.503979 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 2
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 297.0
+margin_top = 263.0
+margin_right = 497.0
+margin_bottom = 336.0
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = " "
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1074.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle3PortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 769.798, 454.161 )
+scale = Vector2( 0.275984, 0.259642 )
+texture = ExtResource( 6 )
+hframes = 2
+
+[node name="Puzzle1Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 579.845, 424.021 )
+
+[node name="CollisionPolygon2D" parent="Puzzle1Portal" index="0"]
+polygon = PoolVector2Array( 40.9303, 58.7682, -41.4766, 56.8953, -23.1224, 1.83252, 20.3286, 2.5817 )
+
+[node name="Sprite" parent="Puzzle1Portal" index="2"]
+position = Vector2( 1.25987, 29.6081 )
+scale = Vector2( 0.243228, 0.222272 )
+frame = 1
+
+[node name="MiceCagePortalSpriteSheet" type="Sprite" parent="Puzzle1Portal"]
+position = Vector2( 328.93, 28.8931 )
+scale = Vector2( 0.343566, 0.293866 )
+texture = ExtResource( 8 )
+hframes = 2
+
+[node name="WashHandsPoster" parent="." instance=ExtResource( 9 )]
+position = Vector2( 184.874, 364.832 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 370.212, 475.59 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+position = Vector2( 9.05951, 10.1541 )
+scale = Vector2( 0.297709, 0.285066 )
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( 5.35442, -71.2533 )
+
+[node name="CollisionShape2D2" parent="Player" index="3"]
+position = Vector2( 11.4853, 97.5172 )
+
+[node name="FadeInLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="FadeInLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -35.0
+margin_top = -18.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="PopUpBackground" type="ColorRect" parent="."]
+visible = false
+margin_left = -34.0
+margin_top = -23.0
+margin_right = 1062.0
+margin_bottom = 634.0
+mouse_filter = 1
+color = Color( 0, 0, 0, 0.811765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosterPopUp" type="PopupDialog" parent="."]
+margin_left = 371.531
+margin_top = 153.47
+margin_right = 603.531
+margin_bottom = 468.47
+custom_styles/panel = SubResource( 7 )
+popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="poster" type="Sprite" parent="PosterPopUp"]
+position = Vector2( 114.911, 149.013 )
+scale = Vector2( 0.292462, 0.264891 )
+texture = ExtResource( 10 )
+
+[editable path="Puzzle1Portal"]
+
+[editable path="Player"]

@@ -295,6 +295,7 @@ func createAndDeleteParent(
 		s.name = resultName + str(itemCounter)
 		s.connect("area_shape_entered",self,connectionName)
 		s.get_node('Icon').frame = resultFrame
+		s.z_index = 5
 		get_node("WorkTable").add_child(s)
 		parent.queue_free()
 		$CorrectAudio.play()
