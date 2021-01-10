@@ -24,20 +24,20 @@
 
 # Programming language used
 
-This project uses Godot and gdScript to bring our game to life. On the backend we are using python to build our model and serve its output to the players.
+This project uses Godot and GDScript to bring our game to life. On the backend we are using python to build our model and serve its output to the players.
 
 ## Prerequisites
-1) Go to godotengine.org e click Download at the top of the site
+1) Go to godotengine.org & click Download at the top of the site
 2) Download the Standard Version for your system
 3) Extract and copy the executable to a folder of your choice. Godot is self-contained and does not require installation.
 
 
 ## Opening the project 
 1) Open godot engine.
-2) Scan the folder which has the scrips, scenes and assets
-3) Double click to open it in editor
-4) Open FirstCutScene scene
-5) Click play on top right and enjoy!
+2) Press Import and select the directory where you cloned this repository
+3) Double click on project.godot
+4) Press F5 to play the game from the beginning
+5) Enjoy, have fun, and learn as much as you can!
 
 
 
@@ -48,11 +48,11 @@ This project uses Godot and gdScript to bring our game to life. On the backend w
 
 
 # Key Features
-- Learn about covid and covid vaccines.
+- Learn about COVID-19 and COVID-19 vaccines.
 - Clear instructions on every level to enhance learning.
 - Beautiful UI that pleases the player and dark theme which is easy on the eyes.
 - Small story to motivate players to keep playing till the end.
-- Reccomendation system that will recommend players articles on covid 19 to motivate learning even outside the game.
+- Recommendation system that will recommend players articles on COVID-19 to motivate learning even outside the game.
 
 # Future Scope 
 - Better our recommendation system and have better score on predicting the user.
