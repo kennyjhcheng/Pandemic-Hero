@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/trash_bin.wav-dde056869c1e6d5738828d2cb1b50742.sample"
+
+[deps]
+
+source_file="res://Assets/trash_bin.wav"
+dest_files=[ "res://.import/trash_bin.wav-dde056869c1e6d5738828d2cb1b50742.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
