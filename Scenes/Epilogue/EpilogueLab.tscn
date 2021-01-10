@@ -288,6 +288,12 @@ position = Vector2( 9.6267, -43.6159 )
 [node name="CollisionShape2D2" parent="Player" index="3"]
 position = Vector2( 11.4853, 97.5172 )
 
+[node name="MiceCagePortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 925.42, 446.05 )
+scale = Vector2( 0.311821, 0.379505 )
+texture = ExtResource( 7 )
+hframes = 2
+
 [node name="FadeInLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="FadeInLayer"]
@@ -330,13 +336,8 @@ position = Vector2( 96.2497, 130.931 )
 scale = Vector2( 0.292, 0.265 )
 texture = ExtResource( 8 )
 
-[node name="MiceCagePortalSpriteSheet" type="Sprite" parent="."]
-position = Vector2( 925.42, 446.05 )
-scale = Vector2( 0.311821, 0.379505 )
-texture = ExtResource( 7 )
-hframes = 2
-
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_right = 1074.0
 margin_bottom = 693.0
 color = Color( 0, 0, 0, 1 )
