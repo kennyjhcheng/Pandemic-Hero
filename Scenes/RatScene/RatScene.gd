@@ -82,16 +82,16 @@ func _physics_process(delta):
 			get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
 			yield(get_node('fade').get_node('AnimationPlayer'), 'animation_finished')
 			get_node('fade/CanvasLayer/Label').text = "Thank you for playing our game. We hope you enjoyed it.\n Please help us improve the game by filling out a short feedback survey."
-			$AnimationPlayer.play("QuickFade")
-			yield($AnimationPlayer, "animation_finished")
 			get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
+			yield(get_node('fade').get_node('AnimationPlayer'), "animation_finished")
+			get_tree().change_scene("res://Scenes/End/FeedBackUpdated.tscn")
 #			var fadeOutInstance2 = fadeOut.instance()
 #			fadeOutInstance2.name = 'fade2'
 #			self.add_child(fadeOutInstance2)
 #			get_node('fade2/CanvasLayer/Label').text = "Thank you for playing our game. We hope you enjoyed it.\n Please help us improve the game by filling out a short feedback survey."
 #			get_node('fade2/AnimationPlayer').play('FadeToMessage')
 #			yield(get_node('fade2/AnimationPlayer'), 'animation_finished')
-#			get_tree().change_scene("res://Scenes/End/FeedBackUpdated.tscn")
+			
 
 
 

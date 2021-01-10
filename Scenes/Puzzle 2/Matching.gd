@@ -161,7 +161,7 @@ func _on_TextureButton_button_down():
 	fadeOutInstance.name = 'fade'
 	self.add_child(fadeOutInstance)
 	get_node('fade/CanvasLayer/Label').text = "\"Sometimes you find yourself in the middle of chaos, and sometimes in the middle of chaos, you find yourself.\"\n- Boonaa Mohammed"
-	get_node('fade').get_node('AnimationPlayer').play('FadeToMessage')
+	get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
 	yield(get_node('fade').get_node('AnimationPlayer'), 'animation_finished')
 	get_tree().change_scene("res://Scenes/InsideLab/InsideTheLabAfterMatching.tscn")
 	

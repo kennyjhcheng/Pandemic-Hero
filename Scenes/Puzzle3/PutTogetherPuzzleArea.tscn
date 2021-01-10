@@ -682,7 +682,6 @@ margin_right = 488.657
 margin_bottom = 663.891
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 21 )
-texture_hover = ExtResource( 21 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

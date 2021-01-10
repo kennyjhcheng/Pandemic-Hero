@@ -423,7 +423,7 @@ func _on_CompleteButton_button_down():
 	self.add_child(fadeOutInstance)
 	get_node('fade/CanvasLayer/Label').text = "\"Nothing in life is to be feared; it is only to be understood. Now is the time to understand more, so that we may fear less.\" \n- Marie Curie" # We're one step towards creating a vaccine.
 																						  # We're one step towards combating COVID-19.
-	get_node('fade').get_node('AnimationPlayer').play('FadeToMessage')
+	get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
 	yield(get_node('fade').get_node('AnimationPlayer'), 'animation_finished')
 	get_tree().change_scene("res://Scenes/InsideLab/InsideTheLabAfterAlchemy.tscn")
 	

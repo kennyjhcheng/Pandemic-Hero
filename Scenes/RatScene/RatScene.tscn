@@ -18,7 +18,7 @@
 size = 28
 font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -34,16 +34,16 @@ expand_margin_right = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=3]
 size = 18
 font_data = ExtResource( 13 )
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=4]
 _data = {
 "points": PoolVector2Array( -8.73071, 0.39685, 8.73071, -0.39685, 88.0729, 115.451, 0, 0, 0, 0, 815.428, 97.4913, 0, 0, 0, 0, 83.5831, 229.942, 0, 0, 0, 0, 918.695, 393.821, 0, 0, 0, 0, 287.871, 431.985, 0, 0, 0, 0, 415.832, 34.6335, 0, 0, 0, 0, 792.979, 420.76, 0, 0, 0, 0, 117.257, 337.698, 0, 0, 0, 0, 748.08, 180.553, 0, 0, 0, 0, 106.032, 142.39, 0, 0, 0, 0, 864.817, 283.82, 0, 0, 0, 0, 880.531, 81.7769, 7.1433, -38.0976, -7.1433, 38.0976, 106.032, 117.696, 0, 0, 0, 0, 88.9692, 115.214, 0, 0, 0, 0, 88.408, 115.775 )
 }
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -56,15 +56,14 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 28
 font_data = ExtResource( 8 )
 
-[sub_resource type="Theme" id=5]
-default_font = SubResource( 4 )
+[sub_resource type="Theme" id=7]
+default_font = SubResource( 6 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "InjectRat"
+[sub_resource type="Animation" id=8]
 length = 12.0
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -90,8 +89,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "PlayInstructionLabel"
+[sub_resource type="Animation" id=9]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("InstructionLabel:percent_visible")
@@ -106,7 +104,7 @@ tracks/0/keys = {
 "values": [ 0.0, 1.0 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:visible")
 tracks/0/interp = 1
@@ -132,7 +130,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=11]
 size = 28
 font_data = ExtResource( 8 )
 
@@ -175,15 +173,15 @@ margin_left = 18.0
 margin_top = 448.0
 margin_right = 246.0
 margin_bottom = 582.0
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Path" type="Path2D" parent="."]
-curve = SubResource( 2 )
+curve = SubResource( 4 )
 script = ExtResource( 10 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path"]
@@ -213,7 +211,7 @@ margin_left = 415.492
 margin_top = 182.932
 margin_right = 612.492
 margin_bottom = 403.932
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 5 )
 popup_exclusive = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -234,7 +232,7 @@ margin_left = 38.0
 margin_top = 36.0
 margin_right = 157.0
 margin_bottom = 157.0
-theme = SubResource( 5 )
+theme = SubResource( 7 )
 text = "Opps you killed the mouse."
 autowrap = true
 __meta__ = {
@@ -242,16 +240,16 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/InjectRat = SubResource( 6 )
-anims/PlayInstructionLabel = SubResource( 7 )
-anims/QuickFade = SubResource( 8 )
+anims/InjectRat = SubResource( 8 )
+anims/PlayInstructionLabel = SubResource( 9 )
+anims/QuickFade = SubResource( 10 )
 
 [node name="InjectionCompletion" type="Label" parent="."]
 margin_left = 265.0
 margin_top = 421.0
 margin_right = 740.0
 margin_bottom = 452.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 11 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

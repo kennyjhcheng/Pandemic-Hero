@@ -13,3 +13,7 @@ func articleThree():
 
 func articleFour():
 	$phone_article4.visible = true
+
+
+func _on_Close_button_up():
+	get_tree().quit()

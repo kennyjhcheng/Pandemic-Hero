@@ -140,7 +140,7 @@ func _on_ContinueButton_button_down():
 	fadeOutInstance.name = 'fade'
 	self.add_child(fadeOutInstance)
 	get_node('fade/CanvasLayer/Label').text = "\"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence\"\n- Helen Keller"
-	get_node('fade').get_node('AnimationPlayer').play('FadeToMessage')
+	get_node('fade').get_node('AnimationPlayer').play('FadeToMessageDisappear')
 	yield(get_node('fade').get_node('AnimationPlayer'), 'animation_finished')
 	get_tree().change_scene("res://Scenes/InsideLab/InsideTheLabAfterPuzzle3.tscn")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://table.jpg" type="Texture" id=1]
 [ext_resource path="res://Assets/Epilogue/phone_article1.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/Epilogue/phone_article3.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Epilogue/phone_article4.png" type="Texture" id=6]
 [ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Puzzle 3/x_click.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Puzzle 3/x.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "phone"
@@ -123,6 +125,18 @@ tracks/9/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("Close:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 27.1, 28.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
@@ -180,7 +194,7 @@ __meta__ = {
 [node name="Foreground" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 604.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -192,6 +206,21 @@ margin_right = 587.857
 margin_bottom = 306.109
 custom_fonts/font = SubResource( 2 )
 text = "The End"
+percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Close" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 933.0
+margin_top = 39.0
+margin_right = 983.0
+margin_bottom = 89.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Close" to="." method="_on_Close_button_up"]
