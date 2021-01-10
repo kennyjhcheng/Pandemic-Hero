@@ -1,0 +1,104 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/p1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Puzzle3/DropZoneD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://p5.png" type="Texture" id=3]
+[ext_resource path="res://p10.png" type="Texture" id=6]
+[ext_resource path="res://p6.png" type="Texture" id=7]
+[ext_resource path="res://p7.png" type="Texture" id=8]
+[ext_resource path="res://p11.png" type="Texture" id=9]
+[ext_resource path="res://p8.png" type="Texture" id=10]
+[ext_resource path="res://p9.png" type="Texture" id=11]
+[ext_resource path="res://p13.png" type="Texture" id=12]
+[ext_resource path="res://p16.png" type="Texture" id=13]
+[ext_resource path="res://p14.png" type="Texture" id=14]
+[ext_resource path="res://p20.png" type="Texture" id=15]
+[ext_resource path="res://p15.png" type="Texture" id=16]
+[ext_resource path="res://p17.png" type="Texture" id=17]
+[ext_resource path="res://p19.png" type="Texture" id=18]
+[ext_resource path="res://p12.png" type="Texture" id=19]
+[ext_resource path="res://p18.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/ThirdPuzzle.gd" type="Script" id=21]
+
+
+
+
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 21 )
+
+[node name="Position2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 317.457, 54.9398 )
+
+[node name="Position2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 69.9246, 44.4975 )
+dropZoneID = 5
+
+[node name="p1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 249.581, 157.916 )
+
+[node name="p5" type="Sprite" parent="."]
+position = Vector2( 737.914, 345.1 )
+texture = ExtResource( 3 )
+
+[node name="p6" type="Sprite" parent="."]
+position = Vector2( 403.518, 490.969 )
+texture = ExtResource( 7 )
+
+[node name="p7" type="Sprite" parent="."]
+position = Vector2( 519.88, 470.005 )
+texture = ExtResource( 8 )
+
+[node name="p14" type="Sprite" parent="."]
+position = Vector2( 189.286, 499.088 )
+texture = ExtResource( 14 )
+
+[node name="p15" type="Sprite" parent="."]
+position = Vector2( 96.9617, 473.313 )
+texture = ExtResource( 16 )
+
+[node name="p13" type="Sprite" parent="."]
+position = Vector2( 560.717, 144.762 )
+texture = ExtResource( 12 )
+
+[node name="p12" type="Sprite" parent="."]
+position = Vector2( 576.949, 540.611 )
+texture = ExtResource( 19 )
+
+[node name="p9" type="Sprite" parent="."]
+position = Vector2( 86.3321, 345.61 )
+texture = ExtResource( 11 )
+
+[node name="p8" type="Sprite" parent="."]
+position = Vector2( 167.999, 303.883 )
+texture = ExtResource( 10 )
+
+[node name="p10" type="Sprite" parent="."]
+position = Vector2( 108.073, 357.327 )
+texture = ExtResource( 6 )
+
+[node name="p11" type="Sprite" parent="."]
+position = Vector2( 516.605, 560.492 )
+texture = ExtResource( 9 )
+
+[node name="p18" type="Sprite" parent="."]
+position = Vector2( 470.998, 474.927 )
+texture = ExtResource( 20 )
+
+[node name="p16" type="Sprite" parent="."]
+position = Vector2( 334.399, 581.383 )
+texture = ExtResource( 13 )
+
+[node name="p17" type="Sprite" parent="."]
+position = Vector2( 414.024, 596.275 )
+texture = ExtResource( 17 )
+
+[node name="p20" type="Sprite" parent="."]
+position = Vector2( 109.333, 515.444 )
+rotation = -1.74846e-07
+texture = ExtResource( 15 )
+
+[node name="p19" type="Sprite" parent="."]
+position = Vector2( 298.389, 476.187 )
+rotation = -6.28319
+texture = ExtResource( 18 )

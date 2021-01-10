@@ -1,0 +1,193 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Puzzle3/InsideTheLab.gd" type="Script" id=1]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/peaceful.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/keyboard typing.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Background/lab_dehydrator_0.PNG" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "EnteringLab"
+length = 6.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 1.001, 3.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "closeDialog"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1, 3.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 530.902, 33.2415 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=4]
+extra_spacing_char = 1
+extra_spacing_space = -2
+font_data = ExtResource( 2 )
+
+[node name="InsideTheLab" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/EnteringLab = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -1.0
+margin_right = 1025.0
+margin_bottom = 591.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 202.389, 464.03 )
+scale = Vector2( 2, 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 528.437, 609.987 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1056.52, 382.735 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -30.4509, 408.998 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 106.4
+margin_top = 265.885
+margin_right = 306.4
+margin_bottom = 338.885
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = " "
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1074.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
