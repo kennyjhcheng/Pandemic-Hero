@@ -6,7 +6,7 @@
 
 <div align="center"><img src ="ic_launcher.png" style="vertical-align:middle"></div>
 
-<div align="center"><h4>Please do not use any image assets used in this game without contacting the artist (Simi) first. Artists repo and contact can be found below.</h4></div>
+<div align="center"><h4>Please do not use any image assets used in this game without contacting the artist (Simi) first. Artist's repo and contact can be found below.</h4></div>
 
 # Table of Content:
 - [Display Shots](#display-shots)
