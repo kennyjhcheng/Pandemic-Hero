@@ -12,7 +12,7 @@
 - [Display Shots](#display-shots)
 - [Programming Language used ](#programming-language-used)
 - [Opening the project](#opening-the-project)
-- [Playing on website](#playing-on-website)
+- [Playing on website](##playing-on-website)
 - [Key Features](#key-features)
 - [Contact info](#contact-info)
 - [Member List and github repo](#member-list-and-github-repos)
