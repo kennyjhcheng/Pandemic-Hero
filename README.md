@@ -42,7 +42,8 @@ This project uses Godot and GDScript to bring our game to life. On the backend w
 
 
 ## Playing on the website
-
+1) If you do not wish to clone the repo and download the godot engine, you can play it on your browser.
+2) [Play here] (https://github.com/kennyjhcheng/Pandemic-Hero#playing-on-the-website)
 
 
 
