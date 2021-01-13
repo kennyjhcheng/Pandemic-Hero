@@ -18,8 +18,8 @@
 - [Contact info](#contact-info)
 - [Member List and github repo](#member-list-and-github-repos)
 # Awards Won
-# <div align="center">🏆🏆2nd Place Winner at nwHacks 2021😊🏆</div>
-## <div align="center">Western Canada's Biggest Hackathon with almost 800 participants</div>
+<div align="center" style="font-size: 30px">🏆🏆2nd Place Winner at nwHacks 2021😊🏆</div>
+<div align="center" style="font-size: 15px>Western Canada's Biggest Hackathon with almost 800 participants</div>
 <div align="center"><img src ="2nd place.jpg" style="vertical-align:middle"></div>
 <div align="center">https://devpost.com/software/pandemic-hero</div>
 
