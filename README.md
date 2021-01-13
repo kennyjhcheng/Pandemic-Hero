@@ -9,7 +9,7 @@
 <div align="center"><h4>Please do not use any image assets used in this game without contacting the artist (Simi) first. Artist's repo and contact can be found below.</h4></div>
 
 # Table of Content:
-- [Award Won](#awards-won)
+- [Awards Won](#awards-won)
 - [Display Shots](#display-shots)
 - [Programming Language used ](#programming-language-used)
 - [Opening the project](#opening-the-project)
