@@ -9,7 +9,7 @@
 <div align="center"><h4>Please do not use any image assets used in this game without contacting the artist (Simi) first. Artist's repo and contact can be found below.</h4></div>
 
 # Table of Content:
-- [Award Won](#<div align="center">🏆🏆2nd-Place-Winner-at-nwHacks-2021😊🏆</div>)
+- [Award Won](#awards-won)
 - [Display Shots](#display-shots)
 - [Programming Language used ](#programming-language-used)
 - [Opening the project](#opening-the-project)
@@ -17,6 +17,7 @@
 - [Key Features](#key-features)
 - [Contact info](#contact-info)
 - [Member List and github repo](#member-list-and-github-repos)
+# Awards Won
 # <div align="center">🏆🏆2nd Place Winner at nwHacks 2021😊🏆</div>
 ## <div align="center">Western Canada's Biggest Hackathon with almost 800 participants</div>
 <div align="center"><img src ="2nd place.jpg" style="vertical-align:middle"></div>
