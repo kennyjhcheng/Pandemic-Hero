@@ -24,7 +24,7 @@
 <div align="center">https://devpost.com/software/pandemic-hero</div>
 
 ## Watch our video
-!![](https://img.youtube.com/vi/d8jrRyqI19Y.jpg)](https://www.youtube.com/watch?v=d8jrRyqI19Y&feature=youtu.be "Watch our pitch on YouTube")
+[![](https://i.ytimg.com/vi/d8jrRyqI19Y/hqdefault.jpg)](https://www.youtube.com/watch?v=d8jrRyqI19Y&feature=youtu.be "Watch our pitch on YouTube")
 ## Display shots
 
 <div align="center"><img src ="d1.jpg" width="600" height="400"></div>  
