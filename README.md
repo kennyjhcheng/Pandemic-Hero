@@ -16,6 +16,9 @@
 - [Key Features](#key-features)
 - [Contact info](#contact-info)
 - [Member List and github repo](#member-list-and-github-repos)
+# Awards
+<div align="center"><img src ="2nd place.jpg" style="vertical-align:middle"></div>
+
 ## Display shots
 
 <div align="center"><img src ="d1.jpg" width="600" height="400"></div>  
