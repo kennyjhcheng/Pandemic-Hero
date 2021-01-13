@@ -10,6 +10,7 @@
 
 # Table of Content:
 - [Awards Won](#awards-won)
+- [Watch on YouTube](#watch-our-video)
 - [Display Shots](#display-shots)
 - [Programming Language used ](#programming-language-used)
 - [Opening the project](#opening-the-project)
