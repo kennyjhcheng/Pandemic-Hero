@@ -9,7 +9,7 @@
 <div align="center"><h4>Please do not use any image assets used in this game without contacting the artist (Simi) first. Artist's repo and contact can be found below.</h4></div>
 
 # Table of Content:
-- [Award](#🏆🏆2nd Place Winner at nwHacks 2021😊🏆)
+- [Award Won](#🏆🏆2nd-Place-Winner-at-nwHacks-2021😊🏆)
 - [Display Shots](#display-shots)
 - [Programming Language used ](#programming-language-used)
 - [Opening the project](#opening-the-project)
