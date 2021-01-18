@@ -79,7 +79,7 @@ This project uses Godot and GDScript to bring our game to life. On the backend w
  simiwei2017@gmail.com
  ```
  ```
- kennyjiahuacheng@gmail.co
+ kennyjiahuacheng@gmail.com
  ```
  ```
  avichare@sfu.ca
