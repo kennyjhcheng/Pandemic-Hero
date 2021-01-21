@@ -1,0 +1,175 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/Start/Loading_Screen_no_mice.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Start/Mouse.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Start/StartScreen.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Start/Loading_screen_table.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Start/play_btn.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Start/play_btn_click.png" type="Texture" id=6]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Start/O_fullscreen_filled.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Start/O_default.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Start/O_default_filled.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Start/O_fullscreen.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=3]
+length = 6.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/Mouse:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.79377, 1.21803, 2.09391, 2.74634, 3.01085, 3.48985, 4.46153, 5.48796 ),
+"transitions": PoolRealArray( 1, 1, 0.784584, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 251.232, 651.821 ), Vector2( 251.232, 388.804 ), Vector2( 280, 291.31 ), Vector2( 180, 100 ), Vector2( 251.232, -20 ), Vector2( 251.232, -100 ), Vector2( 251.232, -59.3277 ), Vector2( -100, -59.328 ), Vector2( -100, 651.821 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background/Mouse:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2.27371, 2.5958 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -45.0, 0.0, -70.0, 0.0, -45.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/Mouse:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 251.232, 651.821 ) ]
+}
+
+[node name="StartScreen" type="Node2D"]
+position = Vector2( 1, 0 )
+script = ExtResource( 3 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse" type="Sprite" parent="Background"]
+position = Vector2( 251.232, 651.821 )
+scale = Vector2( 0.282577, 0.327693 )
+texture = ExtResource( 2 )
+
+[node name="Loading_screen_table" type="Sprite" parent="Background"]
+position = Vector2( 197.14, 460.74 )
+scale = Vector2( 1.70684, 1.49741 )
+texture = ExtResource( 4 )
+
+[node name="Title" type="Label" parent="Background"]
+margin_left = 687.898
+margin_top = 61.9385
+margin_right = 999.898
+margin_bottom = 142.938
+custom_fonts/font = SubResource( 1 )
+text = "Pandemic Hero"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtitle" type="Label" parent="Background"]
+modulate = Color( 0.54902, 0.811765, 1, 1 )
+margin_left = 687.898
+margin_top = 142.938
+margin_right = 927.898
+margin_bottom = 167.938
+custom_fonts/font = SubResource( 2 )
+text = "Developed by Team A.S.K."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="TextureButton" parent="Background"]
+margin_left = 667.803
+margin_top = 340.083
+margin_right = 1003.8
+margin_bottom = 483.083
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefaultWindowButton" type="TextureButton" parent="Background"]
+modulate = Color( 0.54902, 0.811765, 1, 1 )
+margin_left = 688.0
+margin_top = 475.0
+margin_right = 798.0
+margin_bottom = 515.0
+texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreenButton" type="TextureButton" parent="Background"]
+modulate = Color( 0.54902, 0.811765, 1, 1 )
+margin_left = 687.898
+margin_top = 514.502
+margin_right = 838.898
+margin_bottom = 554.502
+texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MouseSpook = SubResource( 3 )
+anims/Reset = SubResource( 4 )
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+[connection signal="button_up" from="Background/PlayButton" to="." method="_on_PlayButton_button_up"]
+[connection signal="button_down" from="Background/DefaultWindowButton" to="." method="_on_DefaultWindowButton_button_down"]
+[connection signal="button_down" from="Background/FullScreenButton" to="." method="_on_FullScreenButton_button_down"]

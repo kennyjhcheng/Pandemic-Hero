@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Puzzle 2/@LabelSpriteSheet.png" type="Texture" id=1]
+
+[node name="Label" type="Node2D"]
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 35.9112, 35.0186 )
+scale = Vector2( 0.645245, 0.671378 )
+texture = ExtResource( 1 )
+hframes = 4

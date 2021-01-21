@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Puzzle 2/@NucleotidesSpriteSheet.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Puzzle 2/Nucleotide.gd" type="Script" id=2]
+
+[node name="Nucleotide" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 39.0576, 41.5774 )
+scale = Vector2( 0.675862, 0.713333 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 4

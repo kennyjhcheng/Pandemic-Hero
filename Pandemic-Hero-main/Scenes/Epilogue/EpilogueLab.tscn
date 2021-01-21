@@ -1,0 +1,350 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/Epilogue/EpilogueLab.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/GamePortals/@Puzzle3PortalSpriteSheet.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GamePortals/@Puzzle2PortalSpriteSheet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/keyboard typing.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/GamePortals/@MiceCagePortalSpriteSheet.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Background/Wash_Hands.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Posters/ReadBookPoster.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Posters/WashHandsPoster.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Epilogue/Phone.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "EnteringLab"
+length = 17.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 7.8, 8, 11.9, 12.1, 17.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 17.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1, 4.5, 7.8, 7.9, 8, 9.4, 11.9, 12, 12.1, 15, 17.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0 ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1, 7.8, 8, 11.9, 12.1, 17.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_to_alchemy"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeInLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FadeInLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/lab_dehydrator_0.PNG-6185c20f3651fd5d6a105ab6cf9c7490.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 530.902, 41.3761 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+extra_spacing_char = 1
+extra_spacing_space = -2
+font_data = ExtResource( 1 )
+
+[node name="EpilogueLab" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 599.65 ],
+"_edit_vertical_guides_": [ 1024.2 ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/EnteringLab = SubResource( 1 )
+anims/fade_to_alchemy = SubResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = SubResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 529.935, 623.621 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1036.32, 422.021 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 23.0082, 438.424 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="Puzzle2PortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 580.08, 452.567 )
+scale = Vector2( 0.231458, 0.217545 )
+texture = ExtResource( 5 )
+hframes = 2
+
+[node name="Puzzle3PortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 769.805, 453.289 )
+scale = Vector2( 0.346109, 0.275445 )
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="WashHandsPoster" parent="." instance=ExtResource( 10 )]
+position = Vector2( 189.314, 362.472 )
+
+[node name="ReadBookPoster" parent="." instance=ExtResource( 9 )]
+position = Vector2( 486.622, 360.208 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 42.0717
+margin_top = 277.27
+margin_right = 242.073
+margin_bottom = 350.27
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = " "
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phone" parent="." instance=ExtResource( 11 )]
+position = Vector2( 719.574, 447.967 )
+
+[node name="CollisionPolygon2D" parent="Phone" index="0"]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 120.383, 473.456 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+position = Vector2( 9.05951, 10.1541 )
+scale = Vector2( 0.297709, 0.285066 )
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( 9.6267, -43.6159 )
+
+[node name="CollisionShape2D2" parent="Player" index="3"]
+position = Vector2( 11.4853, 97.5172 )
+
+[node name="MiceCagePortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 925.42, 446.05 )
+scale = Vector2( 0.311821, 0.379505 )
+texture = ExtResource( 7 )
+hframes = 2
+
+[node name="FadeInLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="FadeInLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -62.0
+margin_top = -39.0
+margin_right = 77.0
+margin_bottom = 47.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="PopUpBackground" type="ColorRect" parent="."]
+visible = false
+margin_left = -22.0
+margin_top = -17.0
+margin_right = 1094.0
+margin_bottom = 670.0
+color = Color( 0, 0, 0, 0.811765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosterPopUp" type="Popup" parent="."]
+margin_left = 393.639
+margin_top = 159.48
+margin_right = 610.639
+margin_bottom = 420.48
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="PosterPopUp"]
+position = Vector2( 96.2497, 130.931 )
+scale = Vector2( 0.292, 0.265 )
+texture = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1074.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="Phone"]
+
+[editable path="Player"]

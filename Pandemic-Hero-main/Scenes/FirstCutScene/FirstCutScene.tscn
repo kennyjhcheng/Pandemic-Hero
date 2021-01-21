@@ -1,0 +1,367 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Background/forest_background.PNG" type="Texture" id=1]
+[ext_resource path="res://Assets/Background/forest_foreground.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/peaceful.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Background/forest_lab.PNG" type="Texture" id=4]
+[ext_resource path="res://Assets/keyboard typing.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Background/BreezeAudacity.wav" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/FirstCutScene/CustomDialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/FirstCutScene/FirstCutScene.gd" type="Script" id=9]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ShowDirectionToLab"
+length = 4.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3, 3.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "showDirection"
+}, {
+"args": [  ],
+"method": "hideDirection"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 30.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2.3, 2.301, 5, 7, 7.5, 7.501, 9, 11, 11.5, 11.501, 14.6, 17, 17.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "clearDialog"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "clearDialog"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "showDirection"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.3, 5, 7, 7.5, 9, 11, 11.5, 14.6, 17, 17.5, 17.9, 18.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ColorRect:color:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ColorRect:color:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("Player")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 17 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "TransitionToLab"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "hideDirection"
+}, {
+"args": [  ],
+"method": "changeSceneToLab"
+} ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ColorRect:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ColorRect:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_to_lab"
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeOutLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 565.885, 11.6542 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 30.122
+
+[sub_resource type="DynamicFont" id=7]
+size = 17
+font_data = ExtResource( 10 )
+
+[node name="FirstCutScene" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ShowDirectionToLab = SubResource( 1 )
+anims/ThePast = SubResource( 2 )
+anims/TransitionToLab = SubResource( 3 )
+anims/fade_to_lab = SubResource( 4 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="AnimationPlayer"]
+
+[node name="Background" type="ParallaxLayer" parent="AnimationPlayer/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="AnimationPlayer/ParallaxBackground/Background"]
+position = Vector2( 510.533, 299.542 )
+scale = Vector2( 1.70808, 1.50837 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 543.101, 588.181 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="LeftCollision" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -5.59103, 427.647 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="RightCollision" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 1033.51, 396.506 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="BottomCollision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 965.58, 519.113 )
+shape = SubResource( 6 )
+
+[node name="Lab" type="Sprite" parent="."]
+position = Vector2( 486.391, 285.057 )
+scale = Vector2( 1.86544, 1.67805 )
+texture = ExtResource( 4 )
+
+[node name="DirectionLabel" type="Label" parent="."]
+margin_left = 510.091
+margin_top = 544.955
+margin_right = 726.091
+margin_bottom = 584.955
+custom_fonts/font = SubResource( 7 )
+text = "Enter the lab to your right >"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+light_mask = 8
+position = Vector2( 269.801, 518.935 )
+rightFaced = true
+
+[node name="forest_foreground" type="Sprite" parent="."]
+position = Vector2( 519.603, 310.636 )
+scale = Vector2( 1.75192, 1.44032 )
+texture = ExtResource( 2 )
+
+[node name="Label" parent="." instance=ExtResource( 7 )]
+margin_left = 190.434
+margin_top = 344.136
+margin_right = 340.434
+margin_bottom = 411.136
+text = "
+"
+percent_visible = 0.333333
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -22.0
+margin_top = -30.0
+margin_right = 1051.0
+margin_bottom = 629.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Breeze" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -7.0
+
+[node name="FadeOutLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="FadeOutLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

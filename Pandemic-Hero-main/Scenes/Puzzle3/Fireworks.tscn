@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Puzzle 3/0e141c.png" type="Texture" id=1]
+
+
+[sub_resource type="Curve" id=1]
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.707692 )
+colors = PoolColorArray( 0.560784, 0.345098, 0.733333, 1, 0.54902, 0.811765, 1, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+min_value = -200.0
+max_value = 300.0
+_data = [ Vector2( 0.0454545, 127.273 ), 0.0, 0.0, 0, 0, Vector2( 1, 42.0454 ), 43.2432, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=7]
+render_priority = 1
+lifetime_randomness = 1.0
+trail_divisor = 2
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 100.0
+angular_velocity = -720.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -100.0
+linear_accel_random = 0.3
+linear_accel_curve = SubResource( 6 )
+radial_accel = -100.0
+damping = 67.31
+scale = 2.0
+scale_random = 1.0
+color_ramp = SubResource( 4 )
+anim_speed_curve = SubResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+margin_right = 1036.0
+margin_bottom = 625.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 516.898, 296.636 )
+scale = Vector2( 3, 3 )
+amount = 230
+lifetime = 0.5
+speed_scale = 0.4
+explosiveness = 0.5
+process_material = SubResource( 7 )

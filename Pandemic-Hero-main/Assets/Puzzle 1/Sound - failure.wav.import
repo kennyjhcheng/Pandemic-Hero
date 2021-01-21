@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sound - failure.wav-e2e3746aa267a038802853de42bb982d.sample"
+
+[deps]
+
+source_file="res://Assets/Puzzle 1/Sound - failure.wav"
+dest_files=[ "res://.import/Sound - failure.wav-e2e3746aa267a038802853de42bb982d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

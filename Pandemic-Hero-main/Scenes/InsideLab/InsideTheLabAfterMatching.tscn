@@ -1,0 +1,466 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/InsideLab/InsideTheLabAfterMatching.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/InsideLab/Puzzle3Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/GamePortals/@Puzzle2PortalSpriteSheet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/keyboard typing.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/GamePortals/@MiceCagePortalSpriteSheet.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Posters/ReadBookPoster.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Posters/WashHandsPoster.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Background/Wash_Hands.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "EnteringLab"
+length = 40.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 9.01232, 10.9523, 13.9278, 19.4935, 24.3447, 32.2608, 39.0657 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "sayDialog"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+}, {
+"args": [  ],
+"method": "sayNext"
+}, {
+"args": [  ],
+"method": "closeDialog"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 8.9, 9, 9.9, 10, 13.9214, 14.1657, 19.4155, 19.584, 24.2981, 24.3, 27.8, 39.075 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "moveLeft"
+}, {
+"args": [  ],
+"method": "stopMove"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+}, {
+"args": [  ],
+"method": "moveRight"
+}, {
+"args": [  ],
+"method": "pauseUserInput"
+}, {
+"args": [  ],
+"method": "continueUserInput"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1, 7.46776, 9.24432, 9.96081, 10.9511, 12.9893, 14.1961, 17.669, 19.4908, 22.9605, 24.3513, 31.9436, 32.2251, 36.8888 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0 ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1, 9.01232, 9.9, 10.928, 13.9, 14.098, 19.4964, 19.5442, 24.3599, 32.2663, 39.083 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "posterVisible"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "pressEnter"
+}, {
+"args": [  ],
+"method": "pressEnter"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+}, {
+"args": [  ],
+"method": "playTypeSound"
+}, {
+"args": [  ],
+"method": "stopTypeSound"
+} ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Label:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.0746412, 9.0792, 9.95671, 30.8975, 31.9576 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 480.17, 270 ), Vector2( 480.17, 270 ), Vector2( 400, 270 ), Vector2( 400, 270 ), Vector2( 768, 270 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FadeInLayer/ColorRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 29.0568, 30.0416, 31.0567, 32.0715 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FadeInLayer/ColorRect:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 29.0672, 30.0515, 31.0685, 32.0731 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_to_alchemy"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeInLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FadeInLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00466507 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FadeInLayer/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.998326 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/lab_dehydrator_0.PNG-6185c20f3651fd5d6a105ab6cf9c7490.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 530.902, 41.3761 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+extra_spacing_char = 1
+extra_spacing_space = -2
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="InsideTheLabAfterMatching" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 599.65, 415.355, 306.056 ],
+"_edit_vertical_guides_": [ 1024.2 ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/EnteringLab = SubResource( 1 )
+anims/fade_to_alchemy = SubResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = SubResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 529.935, 623.621 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1036.32, 422.021 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 23.0082, 438.424 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1074.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1074.0
+margin_bottom = 693.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle2PortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 580.08, 452.567 )
+scale = Vector2( 0.231458, 0.217545 )
+texture = ExtResource( 5 )
+hframes = 2
+
+[node name="MiceCagePortalSpriteSheet" type="Sprite" parent="."]
+position = Vector2( 910.797, 453.113 )
+scale = Vector2( 0.355053, 0.294598 )
+texture = ExtResource( 7 )
+hframes = 2
+
+[node name="WashHandsPoster" parent="." instance=ExtResource( 9 )]
+position = Vector2( 188.597, 359.074 )
+
+[node name="ReadBookPoster" parent="." instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 482.383, 359.684 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 768.0
+margin_top = 270.0
+margin_right = 968.001
+margin_bottom = 343.0
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = " "
+valign = 1
+autowrap = true
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle1Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 768.621, 447.627 )
+
+[node name="CollisionPolygon2D" parent="Puzzle1Portal" index="0"]
+polygon = PoolVector2Array( 21.285, 31.6872, -14.4238, 32.3943, -6.29211, -23.1136, 9.26422, -23.1136 )
+
+[node name="Sprite" parent="Puzzle1Portal" index="2"]
+position = Vector2( 0.883911, 5.12646 )
+scale = Vector2( 0.344055, 0.284041 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 567.307, 476.582 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+position = Vector2( 9.05951, 10.1541 )
+scale = Vector2( 0.297709, 0.285066 )
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( 10.2623, -46.1984 )
+
+[node name="CollisionShape2D2" parent="Player" index="3"]
+position = Vector2( 11.4853, 97.5172 )
+
+[node name="FadeInLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="FadeInLayer"]
+modulate = Color( 0, 0, 0, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -62.0
+margin_top = -39.0
+margin_right = 77.0
+margin_bottom = 47.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="PopUpBackground" type="ColorRect" parent="."]
+visible = false
+margin_left = -40.0
+margin_top = -26.0
+margin_right = 1185.0
+margin_bottom = 687.0
+color = Color( 0, 0, 0, 0.811765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosterPopUp" type="PopupDialog" parent="."]
+margin_left = 329.0
+margin_top = 74.0
+margin_right = 715.0
+margin_bottom = 534.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="poster" type="Sprite" parent="PosterPopUp"]
+position = Vector2( 193.908, 225.535 )
+scale = Vector2( 0.292, 0.265 )
+texture = ExtResource( 10 )
+
+[editable path="Puzzle1Portal"]
+
+[editable path="Player"]

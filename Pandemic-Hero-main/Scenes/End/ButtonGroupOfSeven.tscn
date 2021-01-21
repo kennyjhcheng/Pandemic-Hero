@@ -1,0 +1,78 @@
+[gd_scene format=2]
+
+[node name="ButtonGroupOfSeven" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 41.338
+margin_right = 227.0
+margin_bottom = 61.338
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 250.0
+margin_top = 41.338
+margin_right = 277.0
+margin_bottom = 61.338
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1.66516
+margin_top = 41.3382
+margin_right = 28.6652
+margin_bottom = 61.3382
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 41.338
+margin_right = 327.0
+margin_bottom = 61.338
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 150.0
+margin_top = 41.338
+margin_right = 177.0
+margin_bottom = 61.338
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 41.338
+margin_right = 127.0
+margin_bottom = 61.338
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 41.338
+margin_right = 77.0
+margin_bottom = 61.338
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}

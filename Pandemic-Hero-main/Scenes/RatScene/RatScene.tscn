@@ -1,0 +1,266 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/RatScene/0e141c.png" type="Texture" id=1]
+[ext_resource path="res://Assets/RatScene/Mice_2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/RatScene/Just_Right_Hand.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/RatScene/hand.gd" type="Script" id=4]
+[ext_resource path="res://Assets/RatScene/Bar.png" type="Texture" id=5]
+[ext_resource path="res://Assets/RatScene/Ticker.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/RatScene/RatScene.gd" type="Script" id=7]
+[ext_resource path="res://Assets/RatScene/VT323-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/RatScene/retry_btn_click.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/RatScene/Path.gd" type="Script" id=10]
+[ext_resource path="res://Assets/RatScene/injection.png" type="Texture" id=11]
+[ext_resource path="res://Assets/RatScene/retry_btn.png" type="Texture" id=12]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.423529, 0.631373, 0.796078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( -8.73071, 0.39685, 8.73071, -0.39685, 88.0729, 115.451, 0, 0, 0, 0, 815.428, 97.4913, 0, 0, 0, 0, 83.5831, 229.942, 0, 0, 0, 0, 918.695, 393.821, 0, 0, 0, 0, 287.871, 431.985, 0, 0, 0, 0, 415.832, 34.6335, 0, 0, 0, 0, 792.979, 420.76, 0, 0, 0, 0, 117.257, 337.698, 0, 0, 0, 0, 748.08, 180.553, 0, 0, 0, 0, 106.032, 142.39, 0, 0, 0, 0, 864.817, 283.82, 0, 0, 0, 0, 880.531, 81.7769, 7.1433, -38.0976, -7.1433, 38.0976, 106.032, 117.696, 0, 0, 0, 0, 88.9692, 115.214, 0, 0, 0, 0, 88.408, 115.775 )
+}
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.423529, 0.631373, 0.796078, 1 )
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+font_data = ExtResource( 8 )
+
+[sub_resource type="Theme" id=7]
+default_font = SubResource( 6 )
+
+[sub_resource type="Animation" id=8]
+length = 12.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "bringInjectionCloseToMouse"
+}, {
+"args": [  ],
+"method": "InjectionProgressOne"
+}, {
+"args": [  ],
+"method": "InjectionProgressTwo"
+}, {
+"args": [  ],
+"method": "InjectionProgressThree"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("InstructionLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=11]
+size = 28
+font_data = ExtResource( 8 )
+
+[node name="RatScene" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = 0.471924
+margin_right = 1044.47
+margin_bottom = 635.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="linearMeter" type="Sprite" parent="."]
+position = Vector2( 535.412, 562.702 )
+texture = ExtResource( 5 )
+
+[node name="meterHand" type="Sprite" parent="."]
+position = Vector2( 282.541, 589.083 )
+scale = Vector2( 0.200776, 0.219774 )
+texture = ExtResource( 6 )
+
+[node name="Instruction" type="Label" parent="."]
+margin_left = 400.55
+margin_top = 498.495
+margin_right = 628.55
+margin_bottom = 533.495
+custom_fonts/font = SubResource( 1 )
+text = "Too Tight"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InstructionLabel" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 448.0
+margin_right = 246.0
+margin_bottom = 582.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource( 4 )
+script = ExtResource( 10 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path"]
+position = Vector2( 88.0729, 115.451 )
+rotation = -0.0291945
+
+[node name="Sprite" type="Sprite" parent="Path/PathFollow2D"]
+position = Vector2( 5.36227, 9.36527 )
+rotation = -6.20882e-09
+scale = Vector2( 0.456839, 0.518747 )
+texture = ExtResource( 2 )
+
+[node name="Injection" type="Sprite" parent="."]
+visible = false
+position = Vector2( 965.071, 58.7254 )
+scale = Vector2( 0.127792, 0.1552 )
+texture = ExtResource( 11 )
+
+[node name="hand" type="Sprite" parent="."]
+position = Vector2( 771.694, 350.054 )
+scale = Vector2( 0.284259, 0.260817 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="FailedPopUp" type="PopupDialog" parent="."]
+margin_left = 415.492
+margin_top = 182.932
+margin_right = 612.492
+margin_bottom = 403.932
+custom_styles/panel = SubResource( 5 )
+popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="FailedPopUp"]
+margin_left = 52.8602
+margin_top = 146.136
+margin_right = 164.86
+margin_bottom = 196.136
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+
+[node name="Text" type="Label" parent="FailedPopUp"]
+margin_left = 38.0
+margin_top = 36.0
+margin_right = 157.0
+margin_bottom = 157.0
+theme = SubResource( 7 )
+text = "Opps you killed the mouse."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/InjectRat = SubResource( 8 )
+anims/PlayInstructionLabel = SubResource( 9 )
+anims/QuickFade = SubResource( 10 )
+
+[node name="InjectionCompletion" type="Label" parent="."]
+margin_left = 265.0
+margin_top = 421.0
+margin_right = 740.0
+margin_bottom = 452.0
+custom_fonts/font = SubResource( 11 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1058.0
+margin_bottom = 642.0
+color = Color( 0.0156863, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="FailedPopUp/TextureButton" to="." method="_on_TextureButton_pressed"]
